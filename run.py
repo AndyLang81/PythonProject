@@ -28,10 +28,10 @@ def place_submarine(grid, size):
 # Function to print the grid with coordinates
 def print_grid(grid):
     size = len(grid)
-    header = "  " + " ".join(chr(ord('A') + i) for i in range(size))
+    header = "  " + " ".join(str(i + 1) for i in range(size))
     print(header)
     for i, row in enumerate(grid):
-        print(f"{i + 1} " + " ".join(row))
+        print(chr(ord('A') + i) + " " + " ".join(row))
 
 # Function to take a shot
 def take_shot(grid, row, col):
@@ -51,8 +51,8 @@ def is_sunk(grid):
 # Function to convert user input (e.g., A1) to grid coordinates
 def convert_input(user_input):
     try:
-        row = ord(user_input[0].upper()) - ord('A')
-        col = int(user_input[1]) - 1
+        col = ord(user_input[0].upper()) - ord('A')
+        row = int(user_input[1]) - 1
         return row, col
     except (IndexError, ValueError):
         return None, None
