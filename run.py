@@ -1,3 +1,5 @@
+import random
+
 # Function to create the grid
 def create_grid(size):
     return [['~' for _ in range(size)] for _ in range(size)]
@@ -65,7 +67,7 @@ def play_game(size=5):
     while shots > 0:
         print(f"\nYou have {shots} shots left.")
         print_grid([['~' if cell == 'S' else cell for cell in row] for row in grid])  # Hide submarine cells
-        user_input = input("Enter coordinate:\n")
+        user_input = input("Enter coordinate:\n ")
         row, col = convert_input(user_input)
         if row is not None and col is not None and 0 <= row < size and 0 <= col < size:
             result = take_shot(grid, row, col)
