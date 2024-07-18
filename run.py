@@ -57,6 +57,13 @@ def convert_input(user_input):
     except (IndexError, ValueError):
         return None, None
 
+# Function to get the correct grammar for the remaining shots
+def shots_left_message(shots):
+    if shots == 1:
+        return "1 shot left."
+    else:
+        return f"{shots} shots left."
+
 # Main game function
 def play_game(size=5):
     grid = create_grid(size)
@@ -65,7 +72,7 @@ def play_game(size=5):
     print("Welcome to Submarine Hunter. Find the submarine before it sinks your ship!")
     print("Enter coordinates in the format A1, B3, etc.")
     while shots > 0:
-        print(f"\nYou have {shots} shots left.")
+        print(f"\nYou have {shots_left_message(shots)}")
         print_grid([['~' if cell == 'S' else cell for cell in row] for row in grid])  # Hide submarine cells
         user_input = input("Enter coordinate:\n ")
         row, col = convert_input(user_input)
