@@ -73,7 +73,7 @@ def play_game(size=5):
             result = take_shot(grid, row, col)
             print(result)
             if result == "Hit!":
-                print("Congratulations! You sunk the submarine!")
+                print("Congratulations! You sunk the submarine! You now rank amongst the naval heroes. To repeat this riveting experience, run the program again.")
                 break
             elif result == "Miss!" and shots == 3:
                 print("The sub is moving into position.")
@@ -88,6 +88,7 @@ def play_game(size=5):
         print("Game over! You're now defenceless.")
         print("The submarine (SSS) was hiding at:")
         print_grid(grid)
+        print("To lose again, please run the program once more.")
 
 # Run the game
 play_game()
