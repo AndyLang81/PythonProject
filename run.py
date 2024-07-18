@@ -51,8 +51,8 @@ def is_sunk(grid):
 # Function to convert user input (e.g., A1) to grid coordinates
 def convert_input(user_input):
     try:
-        col = ord(user_input[0].upper()) - ord('A')
-        row = int(user_input[1]) - 1
+        row = ord(user_input[0].upper()) - ord('A')
+        col = int(user_input[1]) - 1
         return row, col
     except (IndexError, ValueError):
         return None, None
@@ -75,9 +75,9 @@ def play_game(size=5):
             if result == "Hit!":
                 print("Congratulations! You sunk the submarine! You now rank amongst the naval heroes. To repeat this riveting experience, run the program again.")
                 break
-            elif result == "Miss!" and shots == 3:
-                print("The sub is moving into position.")
             elif result == "Miss!" and shots == 2:
+                print("The sub is moving into position.")
+            elif result == "Miss!" and shots == 1:
                 print("The sub is preparing its torpedoes!")
         else:
             print("Invalid coordinates. Try again.")
