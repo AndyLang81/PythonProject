@@ -89,4 +89,29 @@ User will see:
 
 ## Test Cases
 
-Pep8 ci
+User is presented with the starting grid and information about the game.
+![alt text](assets/readmeassets/Test1.png)
+
+Upon selecting a coordinate for fire, the user is selected with a message.
+If the user misses, the message will be "Miss!"
+![alt text](assets/readmeassets/test2.png)
+
+If user misses again, the message will indicate that the sub is moving closer.
+![alt text](assets/readmeassets/Test3.png)
+
+If user misses the final shot, they will lose the game and shown where the sub was located
+as well as a prompt to start the game again.
+![alt text](assets/readmeassets/test4.png)
+
+If user hits with any shot, 1st, 2nd or 3rd, they will win the game, be shown the subs location and be prompted
+to start the game again.
+![alt text](assets/readmeassets/test5.png)
+
+User can restart the game with the "Run Program" button on top of the console window.
+
+![alt text](assets/readmeassets/test6.png)
+
+
+**Pep8 ci**
+The file has be cleared for errors in the Pep8 validator at https://pep8ci.herokuapp.com/
+![alt text](assets/readmeassets/pep8validated.png)
