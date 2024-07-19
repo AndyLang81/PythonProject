@@ -44,7 +44,7 @@ def take_shot(grid, row, col):
         return Fore.GREEN + "Hit!" + Fore.RESET
     elif grid[row][col] == '~':
         grid[row][col] = 'X'
-        return Fore.GREEN + "YELLOW!" + Fore.RESET
+        return Fore.YELLOW + "MISS!" + Fore.RESET
     else:
         return Fore.RED + "Already shot here!" + Fore.RESET
 
@@ -52,14 +52,21 @@ def take_shot(grid, row, col):
 def is_sunk(grid):
     return any(cell == 'X' for row in grid for cell in row)
 
-# Function to convert user input (e.g., A1) to grid coordinates
+# Function to convert user input (e.g., A1) to grid coordinates and validate input
 def convert_input(user_input):
-    try:
-        row = ord(user_input[0].upper()) - ord('A')
-        col = int(user_input[1]) - 1
-        return row, col
-    except (IndexError, ValueError):
+    if len(user_input) != 2:
         return None, None
+    
+    row_char = user_input[0].upper()
+    col_char = user_input[1]
+    
+    if row_char not in 'ABCDE' or col_char not in '12345':
+        return None, None
+    
+    row = ord(row_char) - ord('A')
+    col = int(col_char) - 1
+    
+    return row, col
 
 # Function to get the correct grammar for the remaining shots
 def shots_left_message(shots):
@@ -85,7 +92,8 @@ def play_game(size=5):
             result = take_shot(grid, row, col)
             print(result)
             if result == Fore.GREEN + "Hit!" + Fore.RESET:
-                print(Fore.GREEN + "Congratulations! You sunk the submarine! You now rank amongst the naval heroes. To repeat this riveting experience, run the program again." + Fore.RESET)
+                print(Fore.GREEN + "You sunk the submarine! You now rank amongst the naval heroes." + Fore.RESET)
+                print(Fore.GREEN + "To repeat this riveting experience, run the program again." + Fore.RESET)
                 break
             elif result == Fore.YELLOW + "Miss!" + Fore.RESET and shots == 2:
                 print(Fore.YELLOW + "The sub is moving into position." + Fore.RESET)
@@ -104,5 +112,5 @@ def play_game(size=5):
         print_grid(grid)
         print(Fore.YELLOW + "To lose again, please run the program once more." + Fore.RESET)
 
-# Run the game
-play_game()
+if __name__ == "__main__":
+    play_game()

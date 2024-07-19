@@ -86,3 +86,7 @@ User will see:
 3. Feedback on shots and updates to the grid.
 4. Messages about the number of remaining shots and game status.
 5. A final message either celebrating a win or indicating a loss, with the submarine's location revealed.
+
+## Test Cases
+
+Pep8 ci
