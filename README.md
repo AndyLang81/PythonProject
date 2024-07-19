@@ -2,6 +2,8 @@
 
 Submarine Hunter is a command-line game where the player has to locate and sink a hidden submarine on a grid. You have a limited number of shots to find the submarine before the game ends.
 
+## Link to live project (https://project3-python-45d7a006b41f.herokuapp.com/)
+
 ## How to Play
 
 1. The game initializes a grid and places a submarine of size 3 at a random location.
@@ -26,6 +28,7 @@ Submarine Hunter is a command-line game where the player has to locate and sink 
 - **Python**: The game is implemented using Python, a versatile programming language that is widely used for scripting and developing various applications.
 - **Random Library**: Utilized for generating random positions for placing the submarine and determining orientations.
 - **Command Line Interface (CLI)**: The game runs in a command-line environment where the player inputs coordinates and receives text-based feedback.
+- **Github**: Live site is controlled and launched via Github.
 
 ## Game Logic
 
@@ -38,11 +41,6 @@ Submarine Hunter is a command-line game where the player has to locate and sink 
 
 Game logic flowchart: 
 ![alt text](<assets/readmeassets/game logic.png>)
-
-
-
-
-
 
 # User Stories
 

@@ -44,9 +44,9 @@ def take_shot(grid, row, col):
         return Fore.GREEN + "Hit!" + Fore.RESET
     elif grid[row][col] == '~':
         grid[row][col] = 'X'
-        return Fore.GREEN + "Miss!" + Fore.RESET
+        return Fore.GREEN + "YELLOW!" + Fore.RESET
     else:
-        return Fore.YELLOW + "Already shot here!" + Fore.RESET
+        return Fore.RED + "Already shot here!" + Fore.RESET
 
 # Function to check if the submarine is sunk
 def is_sunk(grid):
@@ -86,12 +86,12 @@ def play_game(size=5):
             if result == Fore.GREEN + "Hit!" + Fore.RESET:
                 print(Fore.GREEN + "Congratulations! You sunk the submarine! You now rank amongst the naval heroes. To repeat this riveting experience, run the program again." + Fore.RESET)
                 break
-            elif result == Fore.GREEN + "Miss!" + Fore.RESET and shots == 2:
-                print(Fore.GREEN + "The sub is moving into position." + Fore.RESET)
-            elif result == Fore.GREEN + "Miss!" + Fore.RESET and shots == 1:
-                print(Fore.GREEN + "The sub is preparing its torpedoes!" + Fore.RESET)
-            elif result == Fore.YELLOW + "Already shot here!" + Fore.RESET:
-                print(Fore.YELLOW + "You have already fired at this location. Try a different coordinate." + Fore.RESET)
+            elif result == Fore.YELLOW + "Miss!" + Fore.RESET and shots == 2:
+                print(Fore.YELLOW + "The sub is moving into position." + Fore.RESET)
+            elif result == Fore.YELLOW + "Miss!" + Fore.RESET and shots == 1:
+                print(Fore.YELLOW + "The sub is preparing its torpedoes!" + Fore.RESET)
+            elif result == Fore.RED + "Already shot here!" + Fore.RESET:
+                print(Fore.RED + "You have already fired at this location. Try a different coordinate." + Fore.RESET)
                 continue
         else:
             print(Fore.RED + "Invalid coordinates. Try again." + Fore.RESET)
@@ -101,7 +101,7 @@ def play_game(size=5):
         print(Fore.RED + "Game over! You're now defenceless." + Fore.RESET)
         print("The submarine (SSS) was hiding at:")
         print_grid(grid)
-        print(Fore.RED + "To lose again, please run the program once more." + Fore.RESET)
+        print(Fore.YELLOW + "To lose again, please run the program once more." + Fore.RESET)
 
 # Run the game
 play_game()
