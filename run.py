@@ -95,9 +95,9 @@ def play_game(size=5):
                 print(Fore.GREEN + "You sunk the submarine! You now rank amongst the naval heroes." + Fore.RESET)
                 print(Fore.GREEN + "To repeat this riveting experience, run the program again." + Fore.RESET)
                 break
-            elif result == Fore.RED + "Miss!" + Fore.RESET and shots == 2:
+            elif result == Fore.RED + "Missed!"  + Fore.RESET and shots == 2:
                 print(Fore.RED + "The sub is moving into position." + Fore.RESET)
-            elif result == Fore.RED + "Miss!" + Fore.RESET and shots == 1:
+            elif result == Fore.RED + "Missed!" + Fore.RESET and shots == 1:
                 print(Fore.RED + "The sub is preparing its torpedoes!" + Fore.RESET)
             elif result == Fore.RED + "Already shot here!" + Fore.RESET:
                 print(Fore.RED + "You have already fired at this location. Try a different coordinate." + Fore.RESET)
@@ -108,7 +108,7 @@ def play_game(size=5):
         shots -= 1
     else:
         print(Fore.RED + "Game over! You're now defenceless." + Fore.RESET)
-        print("The submarine (SSS) was hiding at:")
+        print(Fore.RED + "The submarine (SSS) was hiding at:")
         print_grid(grid)
         print(Fore.YELLOW + "To lose again, please run the program once more." + Fore.RESET)
 
