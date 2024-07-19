@@ -86,9 +86,11 @@ def play_game(size=5):
                 print("The sub is moving into position.")
             elif result == "Miss!" and shots == 1:
                 print("The sub is preparing its torpedoes!")
+            elif result == "Already shot here!":
+                print("You have already fired at this location. Try a different coordinate.")
+                continue
         else:
             print("Invalid coordinates. Try again.")
-        if result == "Already shot here!":
             continue
         shots -= 1
     else:
