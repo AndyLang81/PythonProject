@@ -80,7 +80,8 @@ def play_game(size=5):
     grid = create_grid(size)
     place_submarine(grid, size)
     shots = 3
-    print(Fore.GREEN + "Welcome to Submarine Hunter. Find the submarine before it sinks your ship!" + Fore.RESET)
+    print(Fore.GREEN + "Welcome to Submarine Hunter." + Fore.RESET)
+    print(Fore.GREEN + "Find the submarine before it sinks your ship!" + Fore.RESET)
     print(Fore.GREEN + "Enter coordinates in the format A1, B3, etc." + Fore.RESET)
     print(Fore.GREEN + "You have 3 shots. One hit will sink the sub, make them count." + Fore.RESET)
     while shots > 0:
@@ -92,7 +93,10 @@ def play_game(size=5):
             result = take_shot(grid, row, col)
             print(result)
             if result == Fore.GREEN + "Hit!" + Fore.RESET:
-                print(Fore.GREEN + "You sunk the submarine! You now rank amongst the naval heroes." + Fore.RESET)
+                print(Fore.GREEN + "You sunk the submarine!" + Fore.RESET)
+                print(Fore.GREEN + "You now rank amongst the naval heroes." + Fore.RESET)
+                print(Fore.WHITE + "The submarine (SSS) was hiding at:")
+                print_grid(grid)
                 print(Fore.GREEN + "To repeat this riveting experience, run the program again." + Fore.RESET)
                 break
             elif result == Fore.RED + "MISS!" + Fore.RESET and shots == 2:
@@ -100,7 +104,8 @@ def play_game(size=5):
             elif result == Fore.RED + "MISS!" + Fore.RESET and shots == 1:
                 print(Fore.RED + "The sub is preparing its torpedoes!" + Fore.RESET)
             elif result == Fore.RED + "Already shot here!" + Fore.RESET:
-                print(Fore.RED + "You have already fired at this location. Try a different coordinate." + Fore.RESET)
+                print(Fore.RED + "You have already fired at this location." + Fore.RESET)
+                print(Fore.RED + "Try different coordinates." + Fore.RESET)
                 continue
         else:
             print(Fore.RED + "Invalid coordinates. Try again." + Fore.RESET)
