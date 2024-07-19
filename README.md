@@ -36,7 +36,7 @@ Submarine Hunter is a command-line game where the player has to locate and sink 
 2. **Submarine Placement**: A submarine of size 3 is placed randomly on the grid either horizontally or vertically, without overlapping or going out of bounds.
 3. **User Input**: The user inputs coordinates to take a shot. The input is validated and converted to grid coordinates.
 4. **Shot Evaluation**: Each shot is evaluated to determine if it’s a hit or miss. The result is displayed, and the shot is marked on the grid.
-5. **Victory Condition**: The game checks if the submarine is fully hit. If so, a win message is displayed.
+5. **Victory Condition**: The game checks if the submarine is  hit. If so, a win message is displayed.
 6. **Game Over**: If all shots are used without sinking the submarine, a game over message is shown, revealing the submarine’s location.
 
 Game logic flowchart: 

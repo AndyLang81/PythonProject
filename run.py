@@ -75,6 +75,7 @@ def play_game(size=5):
     shots = 3
     print(Fore.GREEN + "Welcome to Submarine Hunter. Find the submarine before it sinks your ship!" + Fore.RESET)
     print(Fore.GREEN + "Enter coordinates in the format A1, B3, etc." + Fore.RESET)
+    print(Fore.GREEN + "You have 3 shots. One hit will sink the sub, make them count." + Fore.RESET)
     while shots > 0:
         print(f"\nYou have {shots_left_message(shots)}")
         print_grid([['~' if cell == 'S' else cell for cell in row] for row in grid])  # Hide submarine cells
