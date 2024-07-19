@@ -108,7 +108,7 @@ def play_game(size=5):
         shots -= 1
     else:
         print(Fore.RED + "Game over! You're now defenceless." + Fore.RESET)
-        print(Fore.RED + "The submarine (SSS) was hiding at:")
+        print(Fore.WHITE + "The submarine (SSS) was hiding at:")
         print_grid(grid)
         print(Fore.YELLOW + "To lose again, please run the program once more." + Fore.RESET)
 
