@@ -1,4 +1,8 @@
 import random
+from colorama import init, Fore
+
+# Initialize colorama
+init()
 
 # Function to create the grid
 def create_grid(size):
@@ -37,12 +41,12 @@ def print_grid(grid):
 def take_shot(grid, row, col):
     if grid[row][col] == 'S':
         grid[row][col] = 'X'
-        return "Hit!"
+        return Fore.GREEN + "Hit!" + Fore.RESET
     elif grid[row][col] == '~':
         grid[row][col] = 'X'
-        return "Miss!"
+        return Fore.GREEN + "Miss!" + Fore.RESET
     else:
-        return "Already shot here!"
+        return Fore.YELLOW + "Already shot here!" + Fore.RESET
 
 # Function to check if the submarine is sunk
 def is_sunk(grid):
@@ -60,17 +64,17 @@ def convert_input(user_input):
 # Function to get the correct grammar for the remaining shots
 def shots_left_message(shots):
     if shots == 1:
-        return "1 shot left."
+        return Fore.GREEN + "1 shot left." + Fore.RESET
     else:
-        return f"{shots} shots left."
+        return Fore.GREEN + f"{shots} shots left." + Fore.RESET
 
 # Main game function
 def play_game(size=5):
     grid = create_grid(size)
     place_submarine(grid, size)
     shots = 3
-    print("Welcome to Submarine Hunter. Find the submarine before it sinks your ship!")
-    print("Enter coordinates in the format A1, B3, etc.")
+    print(Fore.GREEN + "Welcome to Submarine Hunter. Find the submarine before it sinks your ship!" + Fore.RESET)
+    print(Fore.GREEN + "Enter coordinates in the format A1, B3, etc." + Fore.RESET)
     while shots > 0:
         print(f"\nYou have {shots_left_message(shots)}")
         print_grid([['~' if cell == 'S' else cell for cell in row] for row in grid])  # Hide submarine cells
@@ -79,25 +83,25 @@ def play_game(size=5):
         if row is not None and col is not None and 0 <= row < size and 0 <= col < size:
             result = take_shot(grid, row, col)
             print(result)
-            if result == "Hit!":
-                print("Congratulations! You sunk the submarine! You now rank amongst the naval heroes. To repeat this riveting experience, run the program again.")
+            if result == Fore.GREEN + "Hit!" + Fore.RESET:
+                print(Fore.GREEN + "Congratulations! You sunk the submarine! You now rank amongst the naval heroes. To repeat this riveting experience, run the program again." + Fore.RESET)
                 break
-            elif result == "Miss!" and shots == 2:
-                print("The sub is moving into position.")
-            elif result == "Miss!" and shots == 1:
-                print("The sub is preparing its torpedoes!")
-            elif result == "Already shot here!":
-                print("You have already fired at this location. Try a different coordinate.")
+            elif result == Fore.GREEN + "Miss!" + Fore.RESET and shots == 2:
+                print(Fore.GREEN + "The sub is moving into position." + Fore.RESET)
+            elif result == Fore.GREEN + "Miss!" + Fore.RESET and shots == 1:
+                print(Fore.GREEN + "The sub is preparing its torpedoes!" + Fore.RESET)
+            elif result == Fore.YELLOW + "Already shot here!" + Fore.RESET:
+                print(Fore.YELLOW + "You have already fired at this location. Try a different coordinate." + Fore.RESET)
                 continue
         else:
-            print("Invalid coordinates. Try again.")
+            print(Fore.RED + "Invalid coordinates. Try again." + Fore.RESET)
             continue
         shots -= 1
     else:
-        print("Game over! You're now defenceless.")
+        print(Fore.RED + "Game over! You're now defenceless." + Fore.RESET)
         print("The submarine (SSS) was hiding at:")
         print_grid(grid)
-        print("To lose again, please run the program once more.")
+        print(Fore.RED + "To lose again, please run the program once more." + Fore.RESET)
 
 # Run the game
 play_game()
