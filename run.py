@@ -44,7 +44,7 @@ def take_shot(grid, row, col):
         return Fore.GREEN + "Hit!" + Fore.RESET
     elif grid[row][col] == '~':
         grid[row][col] = 'X'
-        return Fore.YELLOW + "MISS!" + Fore.RESET
+        return Fore.RED + "MISS!" + Fore.RESET
     else:
         return Fore.RED + "Already shot here!" + Fore.RESET
 
@@ -95,10 +95,10 @@ def play_game(size=5):
                 print(Fore.GREEN + "You sunk the submarine! You now rank amongst the naval heroes." + Fore.RESET)
                 print(Fore.GREEN + "To repeat this riveting experience, run the program again." + Fore.RESET)
                 break
-            elif result == Fore.YELLOW + "Miss!" + Fore.RESET and shots == 2:
-                print(Fore.YELLOW + "The sub is moving into position." + Fore.RESET)
-            elif result == Fore.YELLOW + "Miss!" + Fore.RESET and shots == 1:
-                print(Fore.YELLOW + "The sub is preparing its torpedoes!" + Fore.RESET)
+            elif result == Fore.RED + "Miss!" + Fore.RESET and shots == 2:
+                print(Fore.RED + "The sub is moving into position." + Fore.RESET)
+            elif result == Fore.RED + "Miss!" + Fore.RESET and shots == 1:
+                print(Fore.RED + "The sub is preparing its torpedoes!" + Fore.RESET)
             elif result == Fore.RED + "Already shot here!" + Fore.RESET:
                 print(Fore.RED + "You have already fired at this location. Try a different coordinate." + Fore.RESET)
                 continue
