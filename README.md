@@ -57,10 +57,12 @@ I want a game that challenges my logic and decision-making skills, so I can have
    - **Win:** All submarine cells are hit.
    - **Lose:** No shots remain, and the submarine is revealed.
 
-   ---
+---
 
 Game logic flowchart:  
 ![Game Logic Flowchart](assets/readmeassets/gamelogic.png)
+
+---
 
 ## Functions
 
@@ -73,7 +75,6 @@ Game logic flowchart:
 - **`shots_left_message(shots)`**: Returns a message indicating the number of remaining shots.
 - **`play_game(size=5)`**: Runs the main game loop, handling setup, player interaction, and game termination.
 
-
 ---
 
 ## Technologies Used
@@ -83,14 +84,13 @@ Game logic flowchart:
 - **Command-Line Interface (CLI):** A simple, text-based interface for gameplay.
 - **GitHub:** Version control and project hosting.
 - **Heroku:** Deployed for live playability.
-- **Colorama:** Provides color-coded terminal outputs to enhance user feedback.
-
 
 ---
 
 ## Installation and Deployment
 
 ### Local Installation
+
 Follow these steps to clone and run the game on your local machine:
 
 1. **Clone the Repository:**  
@@ -139,6 +139,8 @@ Follow these steps to clone and run the game on your local machine:
 
     4. Your project will now compile and deploy.
 
+---
+
 ## Testing
 
 ### Scenarios Tested
@@ -159,7 +161,7 @@ Initial grid and instructions:
 ![Miss Feedback](assets/readmeassets/test2.png)
 
 #### Proximity Feedback
-Feedback as submarine gets closer to firing:  
+Feedback as the submarine moves closer to the player:  
 ![Proximity Feedback](assets/readmeassets/Test3.png)
 
 #### Game Over
@@ -174,6 +176,7 @@ Victory message displayed:
 The code was validated with PEP8, ensuring compliance with Python standards:  
 ![PEP8 Validation](assets/readmeassets/pep8validated.png)
 
+---
 
 ## Future Enhancements
 
@@ -184,6 +187,7 @@ The code was validated with PEP8, ensuring compliance with Python standards:
 5. **Power-ups:** Features like extra shots or sonar scans to spice things up.
 
 ---
+
 ## Acknowledgments
 
 - **Python Documentation:** For guidance on randomization and input handling.
