@@ -57,8 +57,22 @@ I want a game that challenges my logic and decision-making skills, so I can have
    - **Win:** All submarine cells are hit.
    - **Lose:** No shots remain, and the submarine is revealed.
 
+   ---
+
 Game logic flowchart:  
 ![Game Logic Flowchart](assets/readmeassets/gamelogic.png)
+
+## Code functions
+
+- **`create_grid(size)`**: Creates a grid of the specified size with all cells initialized as unexplored (`~`).
+- **`place_submarine(grid, size)`**: Places a submarine of size 3 randomly on the grid, ensuring it doesn't overlap or go out of bounds.
+- **`print_grid(grid)`**: Displays the grid with row and column labels, updating it after every shot.
+- **`take_shot(grid, row, col)`**: Handles the logic for each player shot, determining if it hits, misses, or duplicates a previous shot.
+- **`is_sunk(grid)`**: Checks if all parts of the submarine have been hit, declaring the game won if true.
+- **`convert_input(user_input)`**: Converts user input (e.g., `A1`) into grid coordinates for the game to process.
+- **`shots_left_message(shots)`**: Returns a message indicating the number of remaining shots.
+- **`play_game(size=5)`**: Runs the main game loop, handling setup, player interaction, and game termination.
+
 
 ---
 
@@ -75,10 +89,40 @@ Game logic flowchart:
 ## Installation and Deployment
 
 ### Local Installation
-adding later
+Follow these steps to clone and run the game on your local machine:
 
-### Deployment on Heroku
-adding later
+1. **Clone the Repository:**  
+   Use the `git clone` command to copy the project repository to your local system.  
+
+   In bash, use:
+   `git clone https://github.com/AndyLang81/PythonProject.git`
+
+2. **Navigate to the Project Directory:**
+
+    Change to the directory where the project files were clone.
+    In bash, use:
+    `cd submarine-hunter`
+
+3. **Ensure Python is Installed:**
+    
+    in bash, use:
+    `python --version`
+    
+    if python is not installed, in bash, use: `choco install python` or install from python.org
+
+4. **Install Dependencies:**
+
+    Use pip to install the required dependencies, including colorama, 
+    after adding colorama to "requirements.txt", use:
+    
+    `pip install -r requirements.txt`
+
+4. **Run the game:**
+
+    in bash, use: `python submarine_hunter.py`
+
+5. **Play the game**
+    Follow on-screen instructions
 
 ---
 
