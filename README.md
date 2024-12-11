@@ -90,3 +90,29 @@ adding later
 - **Repeat Shots:** Warns the user if they target the same cell twice.
 - **Winning:** The game recognizes and announces when the submarine is sunk.
 - **Losing:** Displays the submarine’s location after all shots are used.
+
+### Test Case Outputs
+
+#### Game Start
+Initial grid and instructions:  
+![Game Start](assets/readmeassets/Test1.png)
+
+#### Taking a Shot
+"Miss!" feedback for a missed shot:  
+![Miss Feedback](assets/readmeassets/test2.png)
+
+#### Proximity Feedback
+Feedback as shots get closer to the submarine:  
+![Proximity Feedback](assets/readmeassets/Test3.png)
+
+#### Game Over
+Submarine location revealed after losing:  
+![Game Over](assets/readmeassets/test4.png)
+
+#### Winning the Game
+Victory message displayed:  
+![Winning Message](assets/readmeassets/test5.png)
+
+### Code Validation
+The code was validated with PEP8, ensuring compliance with Python standards:  
+![PEP8 Validation](assets/readmeassets/pep8validated.png)
