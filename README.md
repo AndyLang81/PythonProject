@@ -61,3 +61,13 @@ Game logic flowchart:
 ![Game Logic Flowchart](assets/readmeassets/gamelogic.png)
 
 ---
+
+## Technologies Used
+
+- **Python:** Used for game logic and flow.
+- **Random Library:** To generate random submarine placements and orientations.
+- **Command-Line Interface (CLI):** A simple, text-based interface for gameplay.
+- **GitHub:** Version control and project hosting.
+- **Heroku:** Deployed for live playability.
+
+---
