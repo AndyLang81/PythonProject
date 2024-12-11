@@ -116,3 +116,14 @@ Victory message displayed:
 ### Code Validation
 The code was validated with PEP8, ensuring compliance with Python standards:  
 ![PEP8 Validation](assets/readmeassets/pep8validated.png)
+
+
+## Future Enhancements
+
+1. **Graphical User Interface (GUI):** A visual board for a more interactive experience.
+2. **Difficulty Levels:** Options for larger grids or fewer shots.
+3. **Multiplayer Mode:** Two players competing to find each other’s submarines.
+4. **AI Submarine Movement:** A moving target for added difficulty.
+5. **Power-ups:** Features like extra shots or sonar scans to spice things up.
+
+---
