@@ -31,3 +31,13 @@ I want to see how the game is built behind the scenes, so I can learn practical 
 I want a game that challenges my logic and decision-making skills, so I can have fun while sharpening my ability to think strategically.
 
 ---
+
+## Features
+
+- **Dynamic Submarine Placement:** Every game starts with the submarine in a new random location.
+- **Limited Shots:** Players only have 3 shots to sink the submarine, making every move count.
+- **Instant Feedback:** Clear messages let you know if you hit, miss, or repeated a shot.
+- **Simple Controls:** Enter coordinates like `A1` or `B3` to play — it’s that easy.
+- **Replayability:** The game restarts quickly, so you can play over and over.
+
+---
