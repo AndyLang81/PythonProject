@@ -102,7 +102,7 @@ Initial grid and instructions:
 ![Miss Feedback](assets/readmeassets/test2.png)
 
 #### Proximity Feedback
-Feedback as shots get closer to the submarine:  
+Feedback as submarine gets closer to firing:  
 ![Proximity Feedback](assets/readmeassets/Test3.png)
 
 #### Game Over
@@ -125,5 +125,13 @@ The code was validated with PEP8, ensuring compliance with Python standards:
 3. **Multiplayer Mode:** Two players competing to find each other’s submarines.
 4. **AI Submarine Movement:** A moving target for added difficulty.
 5. **Power-ups:** Features like extra shots or sonar scans to spice things up.
+
+---
+## Acknowledgments
+
+- **Python Documentation:** For guidance on randomization and input handling.
+- **PEP8 Validator:** For ensuring clean, readable code.
+- **Classic Battleship Game:** The inspiration behind the mechanics.
+- **Heroku:** For hosting the live demo.
 
 ---
