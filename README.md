@@ -41,3 +41,23 @@ I want a game that challenges my logic and decision-making skills, so I can have
 - **Replayability:** The game restarts quickly, so you can play over and over.
 
 ---
+
+## Game Logic
+
+1. **Grid Creation:** A 5x5 grid starts with all cells marked as `~` (unexplored).
+2. **Random Submarine Placement:** A 3-cell-long submarine is randomly placed either horizontally or vertically.
+3. **Player Interaction:**
+   - Input is validated and converted to grid coordinates.
+   - Each shot is evaluated as a hit, miss, or duplicate.
+4. **Game Progression:**
+   - The grid updates after each shot.
+   - Remaining shots are displayed.
+   - The game checks after every move if the submarine is sunk.
+5. **End Conditions:**
+   - **Win:** All submarine cells are hit.
+   - **Lose:** No shots remain, and the submarine is revealed.
+
+Game logic flowchart:  
+![Game Logic Flowchart](assets/readmeassets/gamelogic.png)
+
+---
