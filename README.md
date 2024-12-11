@@ -84,6 +84,7 @@ Game logic flowchart:
 - **Command-Line Interface (CLI):** A simple, text-based interface for gameplay.
 - **GitHub:** Version control and project hosting.
 - **Heroku:** Deployed for live playability.
+- **Colorama:** Provides color-coded terminal outputs to enhance user feedback.
 
 ---
 
