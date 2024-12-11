@@ -36,9 +36,10 @@ I want a game that challenges my logic and decision-making skills, so I can have
 
 - **Dynamic Submarine Placement:** Every game starts with the submarine in a new random location.
 - **Limited Shots:** Players only have 3 shots to sink the submarine, making every move count.
-- **Instant Feedback:** Clear messages let you know if you hit, miss, or repeated a shot.
-- **Simple Controls:** Enter coordinates like `A1` or `B3` to play — it’s that easy.
+- **Color-Coded Feedback:** Colorama enhances the experience by providing color-coded text for hits, misses, and errors.
+- **Guided Gameplay:** Players receive prompts and instant feedback to help them understand their progress.
 - **Replayability:** The game restarts quickly, so you can play over and over.
+
 
 ---
 
@@ -102,7 +103,7 @@ Follow these steps to clone and run the game on your local machine:
 
 2. **Navigate to the Project Directory:**
 
-    Change to the directory where the project files were clone.
+    Change to the directory where the project files were cloned.
     In bash, use:
     `cd PythonProject`
 
@@ -129,16 +130,29 @@ Follow these steps to clone and run the game on your local machine:
 
 ## Deployment to Heroku
 
-    **Steps**
+Follow these steps to manually deploy the game on Heroku via the website:
 
-    1. After logging into your account on Heroku.com, create a new app with a name of your choosing.
+1. **Log In to Heroku:**  
+   Visit [Heroku](https://www.heroku.com/) and log in to your account.
 
-    2. Choose Github as your deployment method. If your Heroku is not connected to your Github already,
-    add it under Manage Account > Applications > Third Party Services.
+2. **Create a New App:**  
+   - Click on the **"New"** button in your Heroku dashboard and select **"Create new app."**
+   - Provide a unique name for your app and select the appropriate region.
 
-    3. Select your relevant repository, and select "Deploy Branch" (main)
+3. **Connect to GitHub:**  
+   - In the app's **"Deploy"** tab, choose **GitHub** as the deployment method.
+   - If not already connected, authorize Heroku to access your GitHub account under **Manage Account > Applications > Third Party Services.**
+   - Search for your repository name and connect it.
 
-    4. Your project will now compile and deploy.
+4. **Deploy the Branch:**  
+   - Select the branch you wish to deploy (e.g., `main`) and click **"Deploy Branch."**
+   - Wait for Heroku to build and deploy the application.
+
+5. **Launch the App:**  
+   - Once deployment is successful, click the **"Open App"** button in Heroku to access your live game.
+   - Share the provided Heroku URL to allow others to play the game.
+
+Your application is now live on Heroku!
 
 ---
 
