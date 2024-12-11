@@ -54,7 +54,7 @@ I want a game that challenges my logic and decision-making skills, so I can have
    - Remaining shots are displayed.
    - The game checks after every move if the submarine is sunk.
 5. **End Conditions:**
-   - **Win:** All submarine cells are hit.
+   - **Win:** Any submarine cells are hit.
    - **Lose:** No shots remain, and the submarine is revealed.
 
 ---
