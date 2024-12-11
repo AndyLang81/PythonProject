@@ -62,7 +62,7 @@ I want a game that challenges my logic and decision-making skills, so I can have
 Game logic flowchart:  
 ![Game Logic Flowchart](assets/readmeassets/gamelogic.png)
 
-## Code functions
+## Functions
 
 - **`create_grid(size)`**: Creates a grid of the specified size with all cells initialized as unexplored (`~`).
 - **`place_submarine(grid, size)`**: Places a submarine of size 3 randomly on the grid, ensuring it doesn't overlap or go out of bounds.
@@ -83,6 +83,8 @@ Game logic flowchart:
 - **Command-Line Interface (CLI):** A simple, text-based interface for gameplay.
 - **GitHub:** Version control and project hosting.
 - **Heroku:** Deployed for live playability.
+- **Colorama:** Provides color-coded terminal outputs to enhance user feedback.
+
 
 ---
 
@@ -101,7 +103,7 @@ Follow these steps to clone and run the game on your local machine:
 
     Change to the directory where the project files were clone.
     In bash, use:
-    `cd submarine-hunter`
+    `cd PythonProject`
 
 3. **Ensure Python is Installed:**
     
@@ -114,7 +116,7 @@ Follow these steps to clone and run the game on your local machine:
 
     Use pip to install the required dependencies, including colorama, 
     after adding colorama to "requirements.txt", use:
-    
+
     `pip install -r requirements.txt`
 
 4. **Run the game:**
@@ -124,7 +126,18 @@ Follow these steps to clone and run the game on your local machine:
 5. **Play the game**
     Follow on-screen instructions
 
----
+## Deployment to Heroku
+
+    **Steps**
+
+    1. After logging into your account on Heroku.com, create a new app with a name of your choosing.
+
+    2. Choose Github as your deployment method. If your Heroku is not connected to your Github already,
+    add it under Manage Account > Applications > Third Party Services.
+
+    3. Select your relevant repository, and select "Deploy Branch" (main)
+
+    4. Your project will now compile and deploy.
 
 ## Testing
 
