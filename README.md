@@ -81,3 +81,12 @@ adding later
 adding later
 
 ---
+
+## Testing
+
+### Scenarios Tested
+- **Valid Input:** Coordinates like `A1` and `C3` work as expected.
+- **Invalid Input:** Handles out-of-bounds or incorrectly formatted inputs.
+- **Repeat Shots:** Warns the user if they target the same cell twice.
+- **Winning:** The game recognizes and announces when the submarine is sunk.
+- **Losing:** Displays the submarine’s location after all shots are used.
