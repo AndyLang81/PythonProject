@@ -71,3 +71,13 @@ Game logic flowchart:
 - **Heroku:** Deployed for live playability.
 
 ---
+
+## Installation and Deployment
+
+### Local Installation
+adding later
+
+### Deployment on Heroku
+adding later
+
+---
